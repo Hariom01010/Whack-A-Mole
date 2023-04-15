@@ -29,7 +29,7 @@ There is no installation required for this project, as it is a web-based game th
    You can choose to play again by clicking the "Start" button.
 
 2. ### For Users:
-    Go to [Whack-A-Mole](hthttps://hariom01010.github.io/Whack-A-Mole/) to play the game.
+    Go to [Whack-A-Mole](https://hariom01010.github.io/Whack-A-Mole/) to play the game.
 
 ## Contributing
 This project is for demonstration purposes only and does not accept contributions. However, you are welcome to use the code as a reference for your own projects or make modifications for personal use.
