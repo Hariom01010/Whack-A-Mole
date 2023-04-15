@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0072ff;
+    color: white;
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.gameData{
+    text-align: center;
+}
+
+.gameData h1{
+    font-size: 65px;
+    margin: 50px;
+}
+
+.gameData div{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.dataDiv *:not(span){
+    margin: 6px;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.button{
+    margin: 40px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f5c515;
+    color: white;
+    border-radius: 8px;
+    width: 8rem;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 6rem;
+}
+
+.image{
+    border: 1px solid white;
+    padding: 20px;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.image *{
+    width: fit-content;
+}
+
+@media screen and (max-width:1200px){
+    .game{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width:950px){
+    .gameData h1{
+        font-size: 50px;
+        margin: 50px;
+    }
+    .dataDiv *:not(span){
+        margin: 6px;
+        padding: 10px 10px;
+        border: 1px solid white;
+        border-radius: 30px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width:830px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:480px){
+    .gameData h1{
+        font-size: 36px;
+        margin: 50px;
+    }
+    .dataDiv *:not(span){
+        margin: 6px 12px;
+        padding: 10px 10px;
+        border: 1px solid white;
+        border-radius: 30px;
+        font-size: 18px;
+    }
+    .image{
+        border: 1px solid white;
+        padding: 15px;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        border-radius: 10px;
+        justify-content: center;
+    }
+    .button:nth-of-type(1){
+        margin: 40px;
+        margin-right: 0px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #f5c515;
+        color: white;
+        border-radius: 8px;
+        width: 8rem;
+    }
+}
