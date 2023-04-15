@@ -36,7 +36,7 @@ function randomMole(){
         null
     }else{
     moleBox = document.getElementById(imageId)
-    moleBox.setAttribute("src","/public/mole2.svg")
+    moleBox.setAttribute("src","public/mole2.svg")
     }
 
 }
@@ -48,7 +48,7 @@ function setScore(e){
             let imageId = e.target.childNodes[0].id;
             let image = document.getElementById(imageId)
             let imgSrc = image.getAttribute("src")
-            if(imgSrc == "/public/mole2.svg"){
+            if(imgSrc == "public/mole2.svg"){
                 score = score+1;
                 document.getElementById("score").innerText = score
             }else{
@@ -59,7 +59,7 @@ function setScore(e){
             let imageId = e.target.id;
             let image = document.getElementById(imageId)
             let imgSrc = image.getAttribute("src")
-            if(imgSrc == "/public/mole2.svg"){
+            if(imgSrc == "public/mole2.svg"){
                 score = score+1;
                 document.getElementById("score").innerText = score
             }else{
