@@ -1,6 +1,6 @@
 # Whack-A-Mole
 
-This is a dummy project for my portfolio, showcasing a simple web-based Whack-A-Mole game. 
+This is a project for my portfolio, showcasing a simple web-based Whack-A-Mole game. 
 The game is built using HTML, CSS, and JavaScript, and allows players to test their reflexes by whacking moles that randomly pop up from holes within a designated time limit.
 
 ## Table of Contents
@@ -13,7 +13,7 @@ The game is built using HTML, CSS, and JavaScript, and allows players to test th
   - Contact Information
 
 ## Installation
-There is no installation required for this project, as it is a web-based game that can be played directly in a web browser. Simply download the project files and open the "index.html" file in your preferred web browser to start playing the game.
+There is no installation required for this project, as it is a web-based game that can be played directly in a web browser. Simply download the project files and open the "index.html" file in your preferred web browser to start playing the game or go to [Whack-A-Mole](https://hariom01010.github.io/Whack-A-Mole/).
 
 ## Usage
 1. ### For Developers:
