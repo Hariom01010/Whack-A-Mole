@@ -4,13 +4,18 @@ let moleBox;
 let intervalId;
 
 function start(){
-    if(time!==0){
-    intervalId =  setInterval(() => {
-            time = time-1
-            document.getElementById("timer").innerText=time
-            randomMole()
+        time = 60;
+        score = 0;
+        document.getElementById("score").innerText = score;
+        document.getElementById("timer").innerText = time;
+        intervalId = setInterval(() => {
+            time = time - 1;
+            document.getElementById("timer").innerText = time;
+            randomMole();
+            if (time == 0) {
+                clearInterval(intervalId);
+            }
         }, 800);
-    }
 }
 
 function reset(){
@@ -38,28 +43,32 @@ function randomMole(){
 
 function setScore(e){
     console.log(e.target)
-    if(e.srcElement.tagName == "DIV"){
-        let imageId = e.target.childNodes[0].id;
-        let image = document.getElementById(imageId)
-        let imgSrc = image.getAttribute("src")
-        if(imgSrc == "/public/mole2.svg"){
-            score = score+1;
-            document.getElementById("score").innerText = score
-        }else{
-            score = score;
-            document.getElementById("score").innerText = score
+    if(document.getElementById("timer").innerText !== 0){
+        if(e.srcElement.tagName == "DIV"){
+            let imageId = e.target.childNodes[0].id;
+            let image = document.getElementById(imageId)
+            let imgSrc = image.getAttribute("src")
+            if(imgSrc == "/public/mole2.svg"){
+                score = score+1;
+                document.getElementById("score").innerText = score
+            }else{
+                score = score;
+                document.getElementById("score").innerText = score
+            }
+        }else if(e.srcElement.tagName == "IMG"){
+            let imageId = e.target.id;
+            let image = document.getElementById(imageId)
+            let imgSrc = image.getAttribute("src")
+            if(imgSrc == "/public/mole2.svg"){
+                score = score+1;
+                document.getElementById("score").innerText = score
+            }else{
+                score = score;
+                document.getElementById("score").innerText = score
+            }
         }
-    }else if(e.srcElement.tagName == "IMG"){
-        let imageId = e.target.id;
-        let image = document.getElementById(imageId)
-        let imgSrc = image.getAttribute("src")
-        if(imgSrc == "/public/mole2.svg"){
-            score = score+1;
-            document.getElementById("score").innerText = score
-        }else{
-            score = score;
-            document.getElementById("score").innerText = score
-        }
+    }else{
+        null
     }
 
 }
